@@ -47,11 +47,10 @@ namespace ZetesAPI_2.Controllers
                 };
             }
 
-            //responseModel = _csvValidator.ValidateCSV(file);
+            responseModel = _csvValidator.ValidateCSV(file);
 
             // check if the validation was successful
-            //if (responseModel.isSuccessful)
-            if(true)
+            if (responseModel.isSuccessful)
             {
                 // get the records and save to list
                 var records = _csvValidator.GetSuccessCsvResponses(file);
